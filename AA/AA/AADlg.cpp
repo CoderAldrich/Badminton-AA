@@ -109,9 +109,9 @@ BOOL CAADlg::OnInitDialog()
 	GetDlgItem(IDC_TOTAL_RSL7)->SetWindowTextA(init);
 	GetDlgItem(IDC_TOTAL_OTHER)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_RSL4)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL5)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL6)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL7)->SetWindowTextA(init);
+	GetDlgItem(IDC_PRICE_RSL5)->SetWindowTextA("7");
+	GetDlgItem(IDC_PRICE_RSL6)->SetWindowTextA("6.5");
+	GetDlgItem(IDC_PRICE_RSL7)->SetWindowTextA("6");
 	GetDlgItem(IDC_PRICE_OTHER)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_GROUND1)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_GROUND2)->SetWindowTextA(init);
@@ -289,6 +289,8 @@ void CAADlg::OnBnClickedAA()
 			ret_price = each_price / 2;
 			str.Format("%.2f", each_price);
 			GetDlgItem(IDC_EACH_PRICE)->SetWindowTextA(str);
+			str.Format("%.2f", total_price);
+			GetDlgItem(IDC_ALL)->SetWindowTextA(str);
 			str.Format("%.2f", ret_price);
 			GetDlgItem(IDC_EACH_RET)->SetWindowTextA(str);
 
@@ -336,9 +338,9 @@ void CAADlg::OnBnClickedClose()
 	GetDlgItem(IDC_TOTAL_RSL7)->SetWindowTextA(init);
 	GetDlgItem(IDC_TOTAL_OTHER)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_RSL4)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL5)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL6)->SetWindowTextA(init);
-	GetDlgItem(IDC_PRICE_RSL7)->SetWindowTextA(init);
+	GetDlgItem(IDC_PRICE_RSL5)->SetWindowTextA("7");
+	GetDlgItem(IDC_PRICE_RSL6)->SetWindowTextA("6.5");
+	GetDlgItem(IDC_PRICE_RSL7)->SetWindowTextA("6");
 	GetDlgItem(IDC_PRICE_OTHER)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_GROUND1)->SetWindowTextA(init);
 	GetDlgItem(IDC_PRICE_GROUND2)->SetWindowTextA(init);
