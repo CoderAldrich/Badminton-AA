@@ -253,6 +253,7 @@ void CAADlg::OnBnClickedAA()
 			GetDlgItem(IDC_EACH_PRICE)->SetWindowTextA(str);
 			str.Format("%.2f", total_price);
 			GetDlgItem(IDC_ALL)->SetWindowTextA(str);
+			GetDlgItem(IDC_IN)->SetWindowTextA(str);
 			GetDlgItem(IDC_EACH_RET)->SetWindowTextA("0");
 
 			if (total_price != 0)
@@ -291,6 +292,8 @@ void CAADlg::OnBnClickedAA()
 			GetDlgItem(IDC_EACH_PRICE)->SetWindowTextA(str);
 			str.Format("%.2f", total_price);
 			GetDlgItem(IDC_ALL)->SetWindowTextA(str);
+			str.Format("%.2f", each_price*total_members);
+			GetDlgItem(IDC_IN)->SetWindowTextA(str);
 			str.Format("%.2f", ret_price);
 			GetDlgItem(IDC_EACH_RET)->SetWindowTextA(str);
 
@@ -356,4 +359,5 @@ void CAADlg::OnBnClickedClose()
 	GetDlgItem(IDC_EACH_PRICE)->SetWindowTextA(init);
 	GetDlgItem(IDC_EACH_RET)->SetWindowTextA(init);
 	GetDlgItem(IDC_ALL)->SetWindowTextA(init);
+	GetDlgItem(IDC_IN)->SetWindowTextA(init);
 }
