@@ -30,6 +30,8 @@ public:
 // 实现
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnStnClickedStaticLink();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(IDD_ABOUTBOX)
@@ -42,6 +44,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+	ON_STN_CLICKED(IDC_STATIC_LINK, &CAboutDlg::OnStnClickedStaticLink)
 END_MESSAGE_MAP()
 
 
@@ -360,4 +363,11 @@ void CAADlg::OnBnClickedClose()
 	GetDlgItem(IDC_EACH_RET)->SetWindowTextA(init);
 	GetDlgItem(IDC_ALL)->SetWindowTextA(init);
 	GetDlgItem(IDC_IN)->SetWindowTextA(init);
+}
+
+
+void CAboutDlg::OnStnClickedStaticLink()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	ShellExecute(0, NULL, _T("http://whqyfyyq.zhongyulian.com/"), NULL, NULL, SW_NORMAL);
 }
